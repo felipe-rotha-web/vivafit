@@ -1,0 +1,639 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Scratch Pad
+meta:
+  id: wrk_scratchpad
+  created: 1709215556475
+  modified: 1709215556475
+  description: ""
+collection:
+  - name: vivafit
+    meta:
+      id: fld_862392ec446143fd9c4e15ece1bfae2c
+      created: 1776335105158
+      modified: 1782482749574
+      sortKey: -1776335105158
+      description: ""
+    children:
+      - name: Users
+        meta:
+          id: fld_3a0ad064d48640269153912381b31cb1
+          created: 1776335113618
+          modified: 1777546173538
+          sortKey: -1777546168016
+          description: ""
+        children:
+          - url: localhost:5000/users/register
+            name: Register
+            meta:
+              id: req_e3a159ef1a7d41e5a4b3aa9aafad467a
+              created: 1776335125403
+              modified: 1782130395162
+              isPrivate: false
+              description: ""
+              sortKey: -1776335125403
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"nome":"roberto",
+                	"email":"carloscampos29@gmail.com",
+                	"senha":"carloscampos",
+                	"confirmsenha":"carloscampos",
+                	"phone":"2342-2342",
+                	"idade":"28",
+                	"nascimento":"30/10/1997",
+                	"altura":"1,80m",
+                	"peso":"75kg",
+                	"genero":"masc",
+                	"lvl_atividade":"0",
+                	"crono_hydro":"6:00am,12:00am,6:00pm,12:00pm",
+                	"dias_itensivos":"01,09,17,25",
+                	"lvl_adm":"0",
+                	"points":"20"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.4.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: localhost:5000/users/login
+            name: Login
+            meta:
+              id: req_a884053f5bab47d29444ac52f785b140
+              created: 1776336340980
+              modified: 1782223432810
+              isPrivate: false
+              description: ""
+              sortKey: -1776335125503
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"email":"carloscampos29@gmail.com",
+                	"senha":"carloscampos"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.5.0
+            authentication:
+              type: bearer
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: localhost:5000/users/checkuser
+            name: Verificar Token
+            meta:
+              id: req_b4d786e7904b4c37861eb705a355f495
+              created: 1776941780544
+              modified: 1782130738607
+              isPrivate: false
+              description: ""
+              sortKey: -1776941780544
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.4.0
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21lIjoicm9iZXJ0byIsImlkIjoxLCJpYXQiOjE3ODIxMzA0MTd9.999102munAPB4ijSHAytuZAXqRAV9QMIqioaTI1Wl2c
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: localhost:5000/users/1
+            name: Listar por Id
+            meta:
+              id: req_5c7f14fc3f5a4a7892ecd4a22a0c44db
+              created: 1777545977014
+              modified: 1779964351329
+              isPrivate: false
+              description: ""
+              sortKey: -1777545977014
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.4.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: localhost:5000/users/edit/1
+            name: Edit_user
+            meta:
+              id: req_3912b5ab54f14224b47c942966d4d723
+              created: 1779964304085
+              modified: 1782486047228
+              isPrivate: false
+              description: ""
+              sortKey: -1777848350442
+            method: PATCH
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"nome":"Carlos",
+                	"email":"carloscampos29@gmail.com",
+                	"phone":"2342-2342"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.5.0
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQ2FybG9zIiwiaWQiOjEsImlhdCI6MTc3ODE1MjU3Nn0.MSAYkqRRrBPu_vIJWkeug1HN4R0Zd2qFpstlYo5h1tw
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: exers
+        meta:
+          id: fld_3127a87e06894b91a0d5296d7182db62
+          created: 1779964115734
+          modified: 1782383330162
+          sortKey: -1779964115734
+          description: ""
+        children:
+          - url: localhost:5000/exers/edit/1
+            name: Edit_exer
+            meta:
+              id: req_f6a240dfa9a141ad822292e000c56ef1
+              created: 1778150723870
+              modified: 1782486037064
+              isPrivate: false
+              description: ""
+              sortKey: -1779964278352
+            method: PATCH
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"exers":"prancha",
+                	"exer_dificuldade":10
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.5.0
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQ2FybG9zIiwiaWQiOjEsImlhdCI6MTc3ODE1MjU3Nn0.MSAYkqRRrBPu_vIJWkeug1HN4R0Zd2qFpstlYo5h1tw
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: localhost:5000/exers/register
+            name: Register
+            meta:
+              id: req_15e19e93880d4d55956ce3068fb070c5
+              created: 1779964274777
+              modified: 1782484280062
+              isPrivate: false
+              description: ""
+              sortKey: -1779964277852
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"exers":"prancha",
+                	"exer_dificuldade":10
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.4.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: localhost:5000/exers/1
+            name: Listar por Id
+            meta:
+              id: req_fe6631a7b3904b6198ec55d8f9ea2f03
+              created: 1779964298394
+              modified: 1782384515300
+              isPrivate: false
+              description: ""
+              sortKey: -1779964278102
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.4.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/exers/
+            name: Listar todos
+            meta:
+              id: req_92b062222ba7441282dd2fec27cc0e6a
+              created: 1779965641932
+              modified: 1782384063150
+              isPrivate: false
+              description: ""
+              sortKey: -1779965641932
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.6.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: exerlist
+        meta:
+          id: fld_50668c4b8f3541bcac260d5b81e2bb20
+          created: 1782225469174
+          modified: 1782226553676
+          sortKey: -1782225469174
+          description: ""
+        children:
+          - url: localhost:5000/exerlist/register
+            name: Register list
+            meta:
+              id: req_f41a89a4a1f949df89e12047bc43d804
+              created: 1782225505672
+              modified: 1782486012704
+              isPrivate: false
+              description: ""
+              sortKey: -1782225473246
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"exer_id":2,
+                	"exer_completa":0,
+                	"User_list_id":2,
+                	"list_number":1
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.4.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: localhost:5000/exerlist/edit/1
+            name: Edit_exer
+            meta:
+              id: req_68d7fe765e254e67824fcb19db08e949
+              created: 1782383968750
+              modified: 1782486028013
+              isPrivate: false
+              description: ""
+              sortKey: -1782225473346
+            method: PATCH
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"exer_id":"1",
+                	"exer_completa":10,
+                	"User_list_id":2,
+                	"list_number":2
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.5.0
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQ2FybG9zIiwiaWQiOjEsImlhdCI6MTc3ODE1MjU3Nn0.MSAYkqRRrBPu_vIJWkeug1HN4R0Zd2qFpstlYo5h1tw
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/exerlist?user_list_id=1&list_number=2
+            name: listar por user_list_id e list_number
+            meta:
+              id: req_0100147e809144eb8e6facc0dfd90726
+              created: 1782384066094
+              modified: 1782484323173
+              isPrivate: false
+              description: ""
+              sortKey: -1782384066094
+            method: GET
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: localhost:5000/exerlist/1
+            name: Listar por Id
+            meta:
+              id: req_8a8deb3b17f3443da4ec79fa7d714be5
+              created: 1782384523013
+              modified: 1782385082381
+              isPrivate: false
+              description: ""
+              sortKey: -1782384066194
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.4.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: lembretes
+        meta:
+          id: fld_a16f4151a58b484e8a663df465dadbf8
+          created: 1782384597664
+          modified: 1782384597664
+          sortKey: -1782384597664
+          description: ""
+        children:
+          - url: localhost:5000/lembres/register
+            name: Register lembrete
+            meta:
+              id: req_297581917f334c56b5b717e8214c633e
+              created: 1782384646061
+              modified: 1782484219461
+              isPrivate: false
+              description: ""
+              sortKey: -1782384648710
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"lembreText":"comer amendoim",
+                	"userListId":2,
+                	"dataLembre":"25/06/2026"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.4.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: localhost:5000/lembres/
+            name: Listar todos
+            meta:
+              id: req_8c7b0895e0a94ec186af5ad116a4badc
+              created: 1782385085219
+              modified: 1782485193117
+              isPrivate: false
+              description: ""
+              sortKey: -1782385085219
+            method: GET
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: "{{ _.url_base }}/lembres/edit/1"
+            name: Edit_lembre
+            meta:
+              id: req_d1c7eff0078c48adb6796da2b733c186
+              created: 1782385134350
+              modified: 1782385167280
+              isPrivate: false
+              description: ""
+              sortKey: -1782385085319
+            method: PATCH
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"lembreText":"beber agua",
+                	"userListId":1,
+                	"dataLembre":"25/06/2026"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.5.0
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQ2FybG9zIiwiaWQiOjEsImlhdCI6MTc3ODE1MjU3Nn0.MSAYkqRRrBPu_vIJWkeug1HN4R0Zd2qFpstlYo5h1tw
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/lembres?user_list_id=2
+            name: "listar por user_list_id "
+            meta:
+              id: req_d6e8595bba12499ebc6f04985a5eaa69
+              created: 1782385221746
+              modified: 1782484230104
+              isPrivate: false
+              description: ""
+              sortKey: -1782385085419
+            method: GET
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: cronograma
+        meta:
+          id: fld_0882f0ce6128483d85dc3dc360f6ec40
+          created: 1782482802303
+          modified: 1782482802303
+          sortKey: -1782482802303
+          description: ""
+        children:
+          - url: localhost:5000/cronos/register
+            name: Register crono
+            meta:
+              id: req_ccb35d764b934d06959760bbe803d7d8
+              created: 1782482789440
+              modified: 1782486069961
+              isPrivate: false
+              description: ""
+              sortKey: -1782482804235
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"tarefa":"beber agua",
+                	"User_list_id":1,
+                	"progresso":1,
+                	"date": "30/06/2026"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.4.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: localhost:5000/cronos/
+            name: Listar todos
+            meta:
+              id: req_e770b8c093a24203a1c188707cefcf78
+              created: 1782485197513
+              modified: 1782485406058
+              isPrivate: false
+              description: ""
+              sortKey: -1782482804335
+            method: GET
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/cronos?user_list_id=2
+            name: "listar por user_list_id "
+            meta:
+              id: req_f49f2faee80e493e9a6b3815b0e5bed7
+              created: 1782485399820
+              modified: 1782485842412
+              isPrivate: false
+              description: ""
+              sortKey: -1782482804435
+            method: GET
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: localhost:5000/cronos/edit/1
+            name: Edit_cronos
+            meta:
+              id: req_1c86a3e482334b74b28f1c07fc89876e
+              created: 1782486058423
+              modified: 1782486089842
+              isPrivate: false
+              description: ""
+              sortKey: -1782482804385
+            method: PATCH
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"tarefa":"beber refri",
+                	"User_list_id":1,
+                	"progresso":1,
+                	"date": "30/06/2026"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.5.0
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQ2FybG9zIiwiaWQiOjEsImlhdCI6MTc3ODE1MjU3Nn0.MSAYkqRRrBPu_vIJWkeug1HN4R0Zd2qFpstlYo5h1tw
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1749034197192
+    modified: 1749034197192
+environments:
+  name: Base Environment
+  meta:
+    id: env_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1749034197067
+    modified: 1749034197067
+    isPrivate: false

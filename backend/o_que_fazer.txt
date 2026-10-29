@@ -1,0 +1,42 @@
+===========================================================
+objetivos para concluir da controller do backend
+===========================================================
+[x]User controller
+
+[x]Crono controller 
+
+[x]Points
+
+[-]Lembretes controller
+
+[]Lista de Exercicios controller
+
+[]Exerciicos controller
+
+[x]User routes
+
+[x]Crono routes
+
+[]Lembretes routes
+
+[]Lista de Exercicios routes
+
+[]Exerciicos routes
+
+[x]User js
+
+[x]Crono js
+
+
+[x]Lembretes js
+
+[x]Lista de Exercicios js
+
+[x]Exerciicos js
+
+[x]Rotas
+
+[x]js
+
+[]controller
+===========================================================

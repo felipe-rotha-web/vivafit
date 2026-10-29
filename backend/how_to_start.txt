@@ -1,0 +1,25 @@
+//no insonia
+{
+	"url_base":"http://localhost:5000"
+}
+
+no terminal do backend no vscode
+npm start
+
+se não tiver a pasta node_modules
+npm i
+
+Recuperação de senha por email
+Configure as variáveis SMTP no mesmo terminal antes de iniciar a API. Exemplo para uma conta Gmail com senha de app:
+
+$env:SMTP_HOST="smtp.gmail.com"
+$env:SMTP_PORT="465"
+$env:SMTP_SECURE="true"
+$env:SMTP_USER="seu-email@gmail.com"
+$env:SMTP_PASS="SENHA_DE_APP_DO_EMAIL"
+$env:SMTP_FROM="VivaFit <seu-email@gmail.com>"
+npm start
+
+Não use a senha normal da conta de email nem compartilhe/commite essas credenciais. No Gmail, gere uma senha de app e use-a em SMTP_PASS. Para outros provedores, substitua host, porta, segurança e remetente pelos dados SMTP fornecidos por eles. Sem SMTP configurado, a API informa que a recuperação não está disponível.
+
+O código enviado expira em 10 minutos, pode ser tentado no máximo 5 vezes e novas solicitações para o mesmo usuário são limitadas a uma por minuto. As rotas de recuperação também têm limite por IP.
